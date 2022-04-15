@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: postgres
+  port: 5432
+  min_messages: WARNING
+
+development: &development
+  <<: *default
+  database: stock_api_dev
+
+test:
+  <<: *default
+  database: stock_api_test
