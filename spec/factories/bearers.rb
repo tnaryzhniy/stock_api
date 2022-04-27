@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :bearer do
-    name { "MyString" }
+    name { "Bearer" }
   end
 end

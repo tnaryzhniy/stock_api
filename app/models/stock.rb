@@ -1,6 +1,8 @@
 class Stock < ApplicationRecord
   belongs_to :bearer
 
+  validates :name, presence: true, uniqueness: true
+
   def self.current
     where(deleted_at: nil)
   end
